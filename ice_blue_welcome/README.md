@@ -20,12 +20,3 @@
 2. 因为上传小程序会把整个目录下所有文件(共12M)都进行上传，而规定上传小程序大小不得超过2M，所以在上传之前将`doc`目录删除(包括`doc`下的子目录文件)，因为`doc`目录是为了给开发者提供素材的目录，与小程序无关。
 3. 由于小程序的appid机制，所以在下载本项目后，要先修改`project.config.json`中的appid为你自己的appid才能运行项目。
 
-## 效果预览
-![index页面](https://images.gitee.com/uploads/images/2019/0818/115827_d5690324_1602984.png)
-
-![index页面](https://images.gitee.com/uploads/images/2019/0818/115631_ad0234e6_1602984.png)
-
-![index页面](https://images.gitee.com/uploads/images/2019/0818/115813_2d037c7b_1602984.png)
-
-![join页面](https://images.gitee.com/uploads/images/2019/0818/115750_80246aaa_1602984.png)
-
