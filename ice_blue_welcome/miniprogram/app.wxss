@@ -1,0 +1,3 @@
+.one-border {
+  border-bottom: 2rpx solid black;
+}

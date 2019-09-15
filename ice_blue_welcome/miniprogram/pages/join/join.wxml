@@ -1,0 +1,74 @@
+<view class="main">
+  <!-- 页面标题 -->
+  <view class="top">
+    <!-- 文字-报名信息填写 -->
+    <view class="apply">
+      <text class="apply-title">报名信息填写</text>
+    </view>
+  </view>
+  <view class="bottom">
+    <!-- 个人基本信息 -->
+    <view class="person-info">
+      <!-- 上左-个人信息填写 -->
+      <view class="left">
+        <view class="input-continer">
+          <input placeholder-class="place-text" value="{{form.name}}" data-params-name="name" bindinput="changeFormParams" placeholder="姓名" placeholder-style='font-size:15px;color:#e6e6e6;' />
+        </view>
+        <view class="hengxian"></view>
+
+        <view class="input-continer">
+          <input placeholder-class="place-text" value="{{form.tel}}" data-params-name="tel" bindinput="changeFormParams" placeholder="电话" placeholder-style='font-size:15px;color:#e6e6e6;' />
+        </view>
+        <view class="hengxian"></view>
+
+        <view class="input-continer">
+          <input placeholder-class="place-text" value="{{form.QQ}}" data-params-name="QQ" bindinput="changeFormParams" placeholder="QQ" placeholder-style='font-size:15px;color:#e6e6e6; margin-left: 2px;' />
+        </view>
+        <view class="hengxian"></view>
+
+        <view class="input-continer">
+          <input placeholder-class="place-text" value="{{form.major}}" data-params-name="major" bindinput="changeFormParams" placeholder="专业&班级" placeholder-style='font-size:15px;color:#e6e6e6;'/>
+        </view>
+        <view class="hengxian"></view>
+      </view>
+      <!-- 上右-icon -->
+      <view class="right">
+        <image class="person-icon" src="../../images/person.png" />
+      </view>
+    </view>
+    <view class="check-group">
+      <radio-group data-params-name="gender" bindchange="changeFormParams">
+        <label>
+          <radio class="" value="男" checked="{{form.gender == '男'}}" />
+          男
+        </label>
+        <label>
+          <radio class="" value="女" checked="{{form.gender == '女'}}" />
+          女
+        </label>
+      </radio-group>
+    </view>
+    <!-- 选择小组 -->
+    <view class="group">
+      <!-- 标题 -->
+      <view class="group-title">
+        <text class="small">轻触下方选组别</text>
+        <text class="title">请选择组别--</text>
+      </view>
+      <view class="one-border"></view>
+      <!-- 小组 -->
+      <view class="group-type">
+        <view class="group-item {{(index==currentGroupIndex || form.group==item)? 'active' : ''}}" wx:for="{{groups}}" wx:key="{{index}}" data-groups-index="{{index}}" bind:tap="changeFormParamsGroup">
+          <text class="group-item-title">{{item}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- 文本输入区域 -->
+    <view class="text-area">
+      <textarea value="{{form.selfIntroduction}}" data-params-name="selfIntroduction" bindinput="changeFormParams" placeholder="简单介绍自己的兴趣爱好,或者擅长哪些技术等等,以及你为什么报这个组。" placeholder-style='font-size:15px;color:bdbbbb;'></textarea>
+    </view>
+    <view class="submit-continer">
+      <view class="submit" bind:tap="submitForm">提交</view>
+    </view>
+  </view>
+</view>

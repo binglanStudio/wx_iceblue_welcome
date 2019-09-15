@@ -1,0 +1,79 @@
+<swiper vertical="true">
+  <swiper-item>
+    <!-- 第一页幻灯片 -->
+    <view class="selection" style="background:pink" bindtouchstart="scrollTouchStart" bindtouchend="scrollTouchEnd">
+      <view class="content item-1">
+        <view class="logo">
+          <image mode="aspectFill" src="../../images/logo.png" />
+        </view>
+        <view class="main">
+          <!-- 第一个幻灯片中间文字 -->
+          <view class="line"></view>
+          <view class="h1">
+          <text>“码出世界，精彩由我”</text>
+          </view>
+          <view class="line"></view>
+          <view class="h3">冰蓝工作室</view>
+          <view class="h2">专注于Web开发技术</view>
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <!-- 第二页幻灯片 -->
+    <view class="selection" style="background:blue" bindtouchstart="scrollTouchStart" bindtouchend="scrollTouchEnd">
+      <view class="content item-2">
+        <view class="title">每一个项目我们都一定全力以赴</view>
+        <view class="item-group">
+          <view class="item" wx:key="{{index}}" wx:for="{{projects}}">
+            <!-- 左边图片 -->
+            <view class="left">
+              <image src="{{item.iconPath}}" />
+            </view>
+            <!-- 右边文字描述 -->
+            <view class="right">
+              <!-- 文字描述的上方标题 -->
+              <view class="top">
+                <text class="title">{{item.title}}</text>
+                <text class="sub-title">{{item.subTitle}}</text>
+              </view>
+              <!-- 描述文字下方详细描述 -->
+              <view class="bottom">{{item.desc}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <!-- 第三页幻灯片 -->
+    <view class="selection" style="background:yellow" bindtouchstart="scrollTouchStart" bindtouchend="scrollTouchEnd">
+      <view class="content item-3 ">
+        <view class="top column-center">
+          <view class="line"></view>
+          <view class="title">加入我们</view>
+          <view class="line"></view>
+          <view class="h2">Join Us</view>
+          <view class="h2">如果你喜欢互联网</view>
+          <view class="h2">如果你对这些满怀热情</view>
+        </view>
+        <view class="middle">
+          <view class="item-group row-center">
+            <view class="item column-center" wx:for="{{groups}}" wx:key="{{index}}">
+              <!-- 图片 -->
+              <view class="image">
+                <image src="{{item.iconPath}}" />
+              </view>
+              <!-- 文字 -->
+              <view class="text">{{item.name}}</view>
+            </view>
+          </view>
+        </view>
+        <view class="bottom">
+          <view class="title">我们随时欢迎你的加入</view>
+          <view class="click" bind:tap="goToJoin">点我加入</view>
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>
