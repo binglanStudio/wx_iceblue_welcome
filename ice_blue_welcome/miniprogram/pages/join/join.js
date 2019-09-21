@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    groups: ['产品组', 'UI设计组', '前端组', '后端组'],
+    groups: ['产品组', '设计组', '前端组', '后端组'],
     currentGroupIndex: -1,
     // 表单参数 start
     form: {
@@ -18,6 +18,15 @@ Page({
       gender: '男',
       group: '',
       selfIntroduction: ''
+    },
+    err_msg: {
+      name: '姓名',
+      tel: '电话',
+      QQ: 'QQ',
+      major: '专业&班级',
+      gender: '性别',
+      group: '组别',
+      selfIntroduction: '自我介绍'
     },
     // 表单参数 end
     isApply: false // 是否以及提交过申请 true->以及提交
@@ -108,12 +117,13 @@ Page({
   submitForm: function () {
     let that = this
     var form = that.data.form
+    let err_msg = that.data.err_msg
     // 验证表单参数
     for (var prop in form) {
       if (isEmpty(form[prop])) {
         // 参数为空，弹出提示信息
         wx.showToast({
-          title: `请填写【${prop}】!`,
+          title: `请填写${err_msg[prop]}!`,
           icon: 'none',
           duration: 2000
         })

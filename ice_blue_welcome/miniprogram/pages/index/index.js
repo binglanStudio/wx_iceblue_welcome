@@ -13,7 +13,7 @@ Page({
 
     groups: [
       {
-        iconPath: '../../images/h5.png',
+        iconPath: '../../images/frontend.png',
         name: '前端开发'
       },
       {
@@ -25,8 +25,8 @@ Page({
         name: 'Android'
       },
       {
-        iconPath: '../../images/iphone.png',
-        name: 'IOS'
+        iconPath: '../../images/apple.png',
+        name: 'iOS'
       },
       {
         iconPath: '../../images/media.png',
@@ -37,8 +37,8 @@ Page({
         name: '产品经理'
       },
       {
-        iconPath: '../../images/ui.png',
-        name: 'UI设计'
+        iconPath: '../../images/design.png',
+        name: '设计'
       },
       {
         iconPath: '../../images/test.png',

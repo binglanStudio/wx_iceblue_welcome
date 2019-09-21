@@ -31,10 +31,6 @@
         </view>
         <view class="hengxian"></view>
       </view>
-      <!-- 上右-icon -->
-      <view class="right">
-        <image class="person-icon" src="../../images/person.png" />
-      </view>
     </view>
     <view class="check-group">
       <radio-group data-params-name="gender" bindchange="changeFormParams">
@@ -53,9 +49,8 @@
       <!-- 标题 -->
       <view class="group-title">
         <text class="small">轻触下方选组别</text>
-        <text class="title">请选择组别--</text>
+        <text class="title">请选择组别：</text>
       </view>
-      <view class="one-border"></view>
       <!-- 小组 -->
       <view class="group-type">
         <view class="group-item {{(index==currentGroupIndex || form.group==item)? 'active' : ''}}" wx:for="{{groups}}" wx:key="{{index}}" data-groups-index="{{index}}" bind:tap="changeFormParamsGroup">

@@ -38,7 +38,7 @@ page {
   margin-top: 10rpx;
   display: flex;
   justify-content: space-between;
-  height: 27%;
+  margin-bottom: 20rpx;
 }
 .main .bottom .person-info .left {
   margin-top: 40rpx;
@@ -46,7 +46,6 @@ page {
 }
 .main .bottom .person-info .left .input-continer {
   box-sizing: border-box;
-  
 }
 
 .hengxian{
