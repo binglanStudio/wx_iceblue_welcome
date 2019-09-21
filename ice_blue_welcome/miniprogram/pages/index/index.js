@@ -69,7 +69,7 @@ Page({
         iconPath: '../../images/mac.png',
         title: '触点餐',
         subTitle: 'Touch point meal',
-        desc: '触点餐系统项目根据刘俐老师指导下退出的基于二维码技术的电子点餐系统。'
+        desc: '触点餐系统项目根据刘俐老师指导下推出的基于二维码技术的电子点餐系统。'
       }
     ]
   },
